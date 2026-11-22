@@ -1,0 +1,12 @@
+name = "cwf-hit-counter"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+[[durable_objects.bindings]]
+name = "COUNTER"
+class_name = "Counter"
+
+# SQLite-backed Durable Objects (the only kind available on the free plan).
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Counter"]
